@@ -18,6 +18,12 @@ export default function Root() {
     const { contacts, q } = useLoaderData();
     const navigation = useNavigation();
 
+    const searching =
+    navigation.location &&
+    new URLSearchParams(navigation.location.search).has(
+      "q"
+    );
+
     return (
       <>
         <div id="sidebar">
@@ -26,6 +32,7 @@ export default function Root() {
           <Form id="search-form" role="search">
               <input
                 id="q"
+                className={searching ? "loading" : ""}
                 aria-label="Search contacts"
                 placeholder="Search"
                 type="search"
@@ -35,7 +42,7 @@ export default function Root() {
               <div
                 id="search-spinner"
                 aria-hidden
-                hidden={true}
+                hidden={!searching}
               />
               <div
                 className="sr-only"
