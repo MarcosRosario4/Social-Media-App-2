@@ -1,4 +1,4 @@
-import { Outlet, Link, useLoaderData, Form,} from "react-router-dom";
+import { Outlet, Link, useLoaderData, Form, } from "react-router-dom";
 import { getContacts, createContact } from "../contacts";
 
 export async function action() {
@@ -6,6 +6,10 @@ export async function action() {
     return { contact };
   }
   
+export async function loader() {
+    const contacts = await getContacts();
+    return { contacts };
+  }
 
 export default function Root() {
     const { contacts } = useLoaderData();
@@ -62,7 +66,7 @@ export default function Root() {
           </nav>
         </div>
         <div id="detail">
-            <Outlet />
+        <Outlet />  
         </div>
       </>
     );
