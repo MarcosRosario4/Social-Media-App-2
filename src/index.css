@@ -36,7 +36,7 @@ button {
   border-radius: 8px;
   padding: 0.5rem 0.75rem;
   box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.2), 0 1px 2px hsla(0, 0%, 0%, 0.2);
-  background-color: rgb(0, 0, 0);
+  background-color: white;
   line-height: 1.5;
   margin: 0;
 }
@@ -48,7 +48,7 @@ button {
 textarea:hover,
 input:hover,
 button:hover {
-  box-shadow: 0 0px 1px hsla(324, 98%, 19%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 0px 1px hsla(0, 0%, 0%, 0.6), 0 1px 2px hsla(0, 0%, 0%, 0.2);
 }
 
 button:active {
@@ -105,10 +105,9 @@ form[action$="destroy"] button {
 #sidebar {
   width: 22rem;
   background-color: #f7f7f7;
-  border-right: solid 1px #090909;
+  border-right: solid 1px #e3e3e3;
   display: flex;
   flex-direction: column;
-
 }
 
 #sidebar > * {
@@ -123,7 +122,7 @@ form[action$="destroy"] button {
   align-items: center;
   margin: 0;
   padding: 1rem 2rem;
-  border-top: 1px solid #440808;
+  border-top: 1px solid #e3e3e3;
   order: 1;
   line-height: 1;
 }
@@ -156,7 +155,6 @@ form[action$="destroy"] button {
   background-position: 0.625rem 0.75rem;
   background-size: 1rem;
   position: relative;
-   
 }
 
 #sidebar > div form input[type="search"].loading {
@@ -171,7 +169,6 @@ form[action$="destroy"] button {
   position: absolute;
   left: 0.625rem;
   top: 0.75rem;
- 
 }
 
 @keyframes spin {
@@ -195,11 +192,10 @@ form[action$="destroy"] button {
 }
 #sidebar nav a.active span {
   color: inherit;
-
 }
 
 i {
-  color: #490808;
+  color: #818181;
 }
 #sidebar nav .active i {
   color: inherit;
@@ -209,7 +205,6 @@ i {
   padding: 0;
   margin: 0;
   list-style: none;
- 
 }
 
 #sidebar li {
@@ -231,16 +226,16 @@ i {
 }
 
 #sidebar nav a:hover {
-  background: #c30a0a;
+  background: #e3e3e3;
 }
 
 #sidebar nav a.active {
   background: hsl(224, 98%, 58%);
-  color: rgb(66, 6, 58);
+  color: white;
 }
 
 #sidebar nav a.pending {
-  color: hsl(343, 86%, 14%);
+  color: hsl(224, 98%, 58%);
 }
 
 #detail {
@@ -258,7 +253,6 @@ i {
 #contact {
   max-width: 40rem;
   display: flex;
-  
 }
 
 #contact h1 {
@@ -266,17 +260,14 @@ i {
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
-  
 }
 
 #contact h1 + p {
   margin: 0;
- 
 }
 
 #contact h1 + p + p {
   white-space: break-spaces;
-  
 }
 
 #contact h1:focus {
@@ -388,78 +379,4 @@ i {
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-
-
-
-
-
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: black;
-  background-color: white;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }
